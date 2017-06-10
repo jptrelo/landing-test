@@ -12,5 +12,8 @@
     "angular": "^1.6.4",
     "gulp": "^3.9.1",
     "gulp-compass": "^2.1.0"
+  },
+  "engines": {
+    "node": "4.1.1"
   }
 }
