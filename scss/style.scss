@@ -1,0 +1,171 @@
+/*Desarrollado por Jhon Trejos*/
+
+@import "compass/css3";
+@import "compass/css3/box-sizing";
+@import "compass/css3/box-shadow";
+@import "compass/css3/text-shadow";
+@import "compass";
+@import "compass/css3/border-radius";
+@import "compass/utilities";
+@import "compass/css3/transform";
+@import "compass/css3/transition";
+@import "compass/css3/font-face";
+
+/*=======colors=======*/
+
+$test_green:				#17c2a4;
+$test_blue:					#14a58c;
+
+/*=======colors-end=======*/
+
+
+/*=======BorderRadius=======*/
+
+@mixin border-radius($radius) {
+	 -webkit-border-radius: $radius;
+		-moz-border-radius: $radius;
+			 border-radius: $radius;
+}
+
+@mixin transform($transforms) {
+	   -moz-transform: $transforms;
+	     -o-transform: $transforms;
+	    -ms-transform: $transforms;
+	-webkit-transform: $transforms;
+    	    transform: $transforms;
+}
+
+/*=======BorderRadius-end=======*/
+
+
+/*=======Artefactos=======*/
+
+%bg-basic {
+	background: {
+		repeat: no-repeat;
+		position: center center;
+		color: transparent;
+		size: 100%;
+	}
+}
+%after-before-bas {
+	position: absolute;
+	content: " ";
+}
+%ab-100 {
+	@extend %after-before-bas;
+	width: 100%;
+}
+
+/*=======Artefactos-end=======*/
+
+
+/* -- Header -- */
+
+
+html, body { height: 100%;}
+
+body {
+	position: relative;	
+	margin: 0;	
+	* { @include box-sizing(border-box);}
+	* {
+	@include transition-duration(0.5s);
+	@include transform(transition);
+	}
+}
+
+a, a:link {
+	text-decoration: none;
+	display: inline-block;
+}
+
+
+
+#c_total {
+	display: table;
+	width: 100%;
+	height: 100%;
+	min-height: 100%;
+	background: $test_green;	
+}
+
+/* End header */
+
+/* Servicios */
+.contenedor {
+	display: table-cell;
+	vertical-align: middle;	
+	color: white;
+	font: {
+		family: 'Titillium Web', sans-serif;
+		size: 15px;
+	};
+	.title {
+		text-align: center;
+		margin-bottom: 3em;
+		h2 {
+			font-family: 'Titillium Web', sans-serif;
+			font-size: 3em;
+			font-weight: 700;
+			padding-top: 0.5em;
+			position: relative;
+			text-transform: uppercase;
+			&:after {
+				@extend %after-before-bas;
+				width: 2em;
+				height: 5px;
+				background: $test_blue;
+				top: 110%;
+				left: 50%;
+				margin-left: -1em;
+			}
+		}
+		p{
+			padding-top: 2em;
+		}
+	}
+	.c_navInt:hover{
+
+		img{
+			top: -5px;
+			position: relative;
+		}
+
+	}	
+	.lista {
+		max-width: 960px;
+		margin: auto;
+		padding-top: 2em;
+		@media (max-width: 965px) { padding: 0 1em;}
+	}
+	ul {
+		list-style: none;
+		padding: 0;
+		display: table;
+	}
+	li {
+		list-style: none;
+		padding: 0;
+		display: table-cell;
+		width: 25%;
+		padding: 0 1.5em;
+		text-align: center;
+		@media (max-width: 768px) {
+			width: 100%;
+			display: block;
+		}
+		h4 {
+			font-family: 'Titillium Web', sans-serif;
+			margin-top: 2em;
+			margin-bottom: 1em;
+			font-size: 1.5em;
+			text-transform: uppercase;
+			font-weight: 700;
+		}
+		p {
+
+		}
+	}
+}
+/* End servicios */

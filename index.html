@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="landing">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Landing</title>
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,700" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css" />
+
+	<!-- bootstrap Styles -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body id="c_total">
+
+	<div class="contenedor" ng-controller="landingCtrl">
+	<!-- Header de la landing -->
+		<div class="title" id="header">
+			<h2>{{headerTitle}}</h2>
+			<p>{{headerText}}</p> 
+		</div>
+	<!-- end header de landing -->
+
+	<!-- servicios ofrecidos -->
+		<div class="lista c_sub" id="nav-bar-huge">
+			<ul>
+				<li class="c_navInt" ng-repeat="item in items">
+					<div class="img">
+						<img src="{{item.image}}" alt="">
+					</div>
+					<div class="text">
+						<h4>{{item.title}}</h4>
+						<p>{{item.text}}</p>
+					</div>
+				</li>
+			</ul>
+
+		</div>
+	<!-- end servicios ofrecidos -->
+
+	</div>
+
+	<!-- jquery -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<!-- Bootstrap JS -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<!-- Angular -->
+	<script src="node_modules/angular/angular.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>
