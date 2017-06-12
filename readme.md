@@ -7,9 +7,7 @@
 
 
 Premisas:
-- Sumar usar gulp para compilar los estilos.
-- Para probar ingresar a http://localhost
-- Utilizar git.
+- Gulp para compilar los estilos.
 - El maquetado debe ser responsivo.
 - Utilizar npm para instalar cualquier dependencia extra.
 - El proyecto ya viene con jquery 3.x y bootstrap 3.x cargado.
